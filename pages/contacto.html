@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <meta name="autor" content="Claudia_Garcia_Dos_Santos" />
     <meta
       name="description"
@@ -70,7 +70,7 @@
             <input
               type="email"
               class="form-control"
-              id="exampleFormControlInput1"
+              id="emailInput"
               placeholder="email@ejemplo.com"
             />
           </div>
@@ -82,7 +82,7 @@
             <input
               type="nombre"
               class="form-control"
-              id="exampleFormControlInput2"
+              id="nombreInput"
               placeholder="ingrese su nombre"
             />
           </div>
@@ -94,7 +94,7 @@
             <input
               type="apellido"
               class="form-control"
-              id="exampleFormControlInput3"
+              id="apellidoInput" 
               placeholder="ingrese su apellido"
             />
           </div>
@@ -105,9 +105,43 @@
             </label>
             <textarea
               class="form-control"
-              id="exampleFormControlTextarea1"
+              id="mensajeInput"
               rows="3"
             ></textarea>
+            <br/>
+            <input type="button" value="Enviar" id="boton" onclick="guardarDatos()" />
+
+            <script>
+              function guardarDatos() {
+                // Obtener los valores ingresados por el usuario
+                var email = document.getElementById('emailInput').value;
+                var nombre = document.getElementById('nombreInput').value;
+                var apellido = document.getElementById('apellidoInput').value;
+                var mensaje = document.getElementById('mensajeInput').value;
+            
+                // Crear un objeto para almacenar los datos
+                var formData = {
+                  email: email,
+                  nombre: nombre,
+                  apellido: apellido,
+                  mensaje: mensaje
+                };
+            
+                // Convertir el objeto en una cadena JSON
+                var formDataJSON = JSON.stringify(formData);
+            
+                // Almacenar los datos en el localStorage
+                localStorage.setItem('formData', formDataJSON);
+              }
+            </script>
+            
+
+            <div id="contenedorMapa" class="col-mb-3 contacto"> 
+              <h5>Dónde Estamos</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5984925099283!2d-58.653583684686765!3d-34.639585366903965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf4be49b8d59%3A0x6491b9f140a8de4d!2sGdor.%20Luis%20Garc%C3%ADa%201900%2C%20B1712KYQ%20Castelar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1676142821593!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  
+          </div>
+
           </div>
         </div>
       </div>

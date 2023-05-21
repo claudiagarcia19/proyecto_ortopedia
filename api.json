@@ -1,0 +1,32 @@
+{
+"productos":[
+  {
+    "id": 1,
+    "nombre": "Bota",
+    "precio": 35000,
+    "cantidad": 1,
+    "img": "/img/bota.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Baston",
+    "precio": 32000,
+    "cantidad": 1,
+    "img": "/img/baston.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Muleta",
+    "precio": 10000,
+    "cantidad": 1,
+    "img": "/img/muleta.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Sugetador_rodilla",
+    "precio": 30000,
+    "cantidad": 1,
+    "img": "/img/sugetador_rodilla.webp"
+  }
+]
+}
